@@ -19,6 +19,6 @@ spec:
         - name: hello-mm
           image: hashicorp/http-echo
           args:
-            - "-text=Hello from Martin try sync!"
+            - "-text=Hello from Martin try sync2!"
           ports:
             - containerPort: 5678
