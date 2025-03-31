@@ -1,0 +1,10 @@
+# hello-mm/role.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: hello-mm-role
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services"]
+  verbs: ["get", "list", "watch"]

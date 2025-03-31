@@ -1,0 +1,24 @@
+# hello-mm/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-mm
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-mm
+  template:
+    metadata:
+      labels:
+        app: hello-mm
+    spec:
+      serviceAccountName: hello-mm-sa
+      containers:
+      - name: hello-mm
+        image: hashicorp/http-echo
+        args:
+        - "-text=Hello from Martin!"
+        ports:
+        - containerPort: 5678
