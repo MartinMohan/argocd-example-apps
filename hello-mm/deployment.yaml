@@ -16,9 +16,9 @@ spec:
     spec:
       serviceAccountName: hello-mm-sa
       containers:
-      - name: hello-mm
-        image: hashicorp/http-echo
-        args:
-        - "-text=Hello from Martin!"
-        ports:
-        - containerPort: 5678
+        - name: hello-mm
+          image: hashicorp/http-echo
+          args:
+            - "-text=Hello from Martin try sync!"
+          ports:
+            - containerPort: 5678
